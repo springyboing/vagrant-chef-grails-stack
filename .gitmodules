@@ -1,0 +1,33 @@
+[submodule "cookbooks/git"]
+	path = cookbooks/git
+	url = git://github.com/opscode-cookbooks/git.git
+[submodule "cookbooks/java"]
+	path = cookbooks/java
+	url = git://github.com/opscode-cookbooks/java.git
+[submodule "cookbooks/mysql"]
+	path = cookbooks/mysql
+	url = git://github.com/opscode-cookbooks/mysql.git
+[submodule "cookbooks/subversion"]
+	path = cookbooks/subversion
+	url = git://github.com/opscode-cookbooks/subversion.git
+[submodule "cookbooks/apt"]
+	path = cookbooks/apt
+	url = git://github.com/opscode-cookbooks/apt.git
+[submodule "cookbooks/openssl"]
+	path = cookbooks/openssl
+	url = git://github.com/opscode-cookbooks/openssl.git
+[submodule "cookbooks/nginx"]
+	path = cookbooks/nginx
+	url = git://github.com/opscode-cookbooks/nginx.git
+[submodule "cookbooks/apache2"]
+	path = cookbooks/apache2
+	url = git://github.com/opscode-cookbooks/apache2.git
+[submodule "cookbooks/tomcat"]
+	path = cookbooks/tomcat
+	url = git://github.com/opscode-cookbooks/tomcat.git
+[submodule "cookbooks/ark"]
+	path = cookbooks/ark
+	url = https://github.com/bryanwb/chef-ark.git
+[submodule "cookbooks/ivy"]
+	path = cookbooks/ivy
+	url = https://github.com/bryanwb/ivy.git
