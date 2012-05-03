@@ -1,6 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+
 Vagrant::Config.run do |config|
   # All Vagrant configuration is done here. For a detailed explanation
   # and listing of configuration options, please view the documentation
@@ -13,20 +14,21 @@ Vagrant::Config.run do |config|
   config.vm.forward_port(80, 9080)   
   config.vm.forward_port(8080, 9090)
 
+  config.vm.provision :shell do |shell|
+    shell.inline = "gem update --conservative chef"
+  end
+
   config.vm.provision :chef_solo do |chef|
     chef.log_level = :debug
-    chef.cookbooks_path = "./cookbooks"
-    #chef.roles_path = "./roles"
+    chef.cookbooks_path = ["./cookbooks", "~/cookbooks"]
+    chef.roles_path = "./roles"
     #chef.data_bags_path = "./databags"
+
+    chef.add_role("dev")
 
     # ensure the latest packages
     chef.add_recipe("apt")
-    chef.add_recipe("git")
-    chef.add_recipe("subversion")
-    chef.add_recipe("java")
-    chef.add_recipe("tomcat")    
     chef.add_recipe("application")
-    chef.add_recipe("development::grails")
 
     chef.json.merge!({
         :java => {

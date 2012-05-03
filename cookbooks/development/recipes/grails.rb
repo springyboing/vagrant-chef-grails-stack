@@ -7,36 +7,13 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe "java"
 
 ['unzip'].each do |pkg|
     package pkg do
-        :upgrade
+        :install
     end
 end
-
-#template "/home/vagrant/.bash_profile" do
-#  source "bash_profile.erb"
-#  owner "vagrant"
-#  group "vagrant"
-#  action :create
-#end
-
-#directory "/home/vagrant/tools/grails-sh" do
-#  owner "vagrant"
-#  group "vagrant"
-#  mode "0755"
-#  action :create
-#  recursive true
-#end
-
-#git "/home/vagrant/tools/grails-sh" do
-#  repository "git://github.com/mattdelliott/grails.sh.git"
-#  reference "HEAD"
-#  user "vagrant"
-#  group "vagrant"
-#  action :sync
-#end
-
 
 grailsVersion = "grails-2.0.3"
 grailsZip = "#{grailsVersion}.zip"
@@ -81,3 +58,10 @@ cookbook_file '/etc/profile.d/grails.sh' do
   mode 0644
   source "etc/profile.d/grails.sh"
 end
+
+#ark "grails" do
+ # url "#{grailsSourceUrl}"
+  #version '2.0.3'
+ # owner 'vagrant'
+ # action :install
+#end

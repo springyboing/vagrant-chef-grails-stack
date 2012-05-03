@@ -1,0 +1,22 @@
+{
+  "name": "dev",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "description": "Sets up a java development enviroment",
+  "run_list": [
+  	"recipe[apt]", 
+  	"recipe[git]", 
+  	"recipe[subversion]", 
+  	"recipe[mysql]", 
+  	"recipe[java]", 
+  	"recipe[development::grails]"
+  ],
+  "env_run_lists" : {
+    "production" : [],
+    "preprod" : [],
+    "dev": [],
+    "test": []
+   },
+  "override_attributes": {}
+}
