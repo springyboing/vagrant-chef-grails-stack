@@ -1,0 +1,19 @@
+{
+  "name": "statsd",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "description": "Sets up statsd enviroment",
+  "run_list": [
+  	"recipe[apt]"
+  	,"recipe[statsd]"
+    /*,"recipe[graphite]"*/
+  ],
+  "env_run_lists" : {
+    "production" : [],
+    "preprod" : [],
+    "dev": [],
+    "test": []
+   },
+  "override_attributes": {}
+}

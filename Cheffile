@@ -1,0 +1,36 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+# cookbook 'chef-client'
+
+# cookbook 'apache2', '>= 1.0.0'
+
+# cookbook 'rvm',
+#   :git => 'https://github.com/fnichol/chef-rvm'
+
+# cookbook 'postgresql',
+#   :git => 'https://github.com/findsyou/cookbooks',
+#   :ref => 'postgresql-improvements'
+
+cookbook 'apache2'
+cookbook 'apt'
+cookbook 'ark'
+cookbook 'git'
+cookbook 'ivy',
+	:git => 'https://github.com/bryanwb/ivy'
+cookbook 'java'
+cookbook 'mysql'
+cookbook 'nginx'
+cookbook 'openssl'
+cookbook 'subversion'
+#cookbook 'tomcat' 
+
+#cookbook 'nginx'
+#cookbook 'infochimps_statsd'
+
+cookbook 'groovy',
+	:git => 'https://github.com/springyboing/grails-cookbook'
+cookbook 'grails',
+	:git => 'https://github.com/springyboing/groovy-cookbook'
