@@ -27,18 +27,13 @@ Vagrant::Config.run do |config|
     chef.roles_path = "./roles"
     #chef.data_bags_path = "./databags"
 
+    chef.add_role("database")
     chef.add_role("dev")
+    chef.add_role("application")
+#    chef.add_role("message-bus")
+
+
     #chef.add_role("statsd")
-
-    chef.json.merge!({
-        :java => {
-          :install_flavor => "openjdk"
-        },
-        :mysql => {
-            :bind_address => "127.0.0.1"
-        }
-
-    })
 
   end
 

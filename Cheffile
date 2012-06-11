@@ -22,9 +22,10 @@ cookbook 'ivy',
 	:git => 'https://github.com/bryanwb/ivy'
 cookbook 'java'
 cookbook 'mysql'
-cookbook 'nginx'
+#cookbook 'nginx'
 cookbook 'openssl'
 cookbook 'subversion'
+#cookbook 'activemq'
 #cookbook 'tomcat' 
 
 #cookbook 'nginx'
