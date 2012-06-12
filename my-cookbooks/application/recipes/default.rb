@@ -28,3 +28,12 @@ git "/vagrant/sample-git" do
   destination "/vagrant/apps/sample-git"
   action :sync
 end
+
+
+mysql_database "create my_app database" do
+  host "localhost"
+  username "root"
+  password "SuperSecret"
+  database "my_app_production"
+  action [:create_db]
+end
