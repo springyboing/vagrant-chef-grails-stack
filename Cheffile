@@ -20,11 +20,17 @@ cookbook 'ark'
 cookbook 'git'
 cookbook 'ivy',
 	:git => 'https://github.com/bryanwb/ivy'
-cookbook 'java'
-cookbook 'mysql'
+cookbook 'java',
+	:git => 'https://github.com/opscode-cookbooks/java.git'
+cookbook 'mysql',
+	:git => 'https://github.com/opscode-cookbooks/mysql.git'
 #cookbook 'nginx'
 cookbook 'openssl'
 cookbook 'subversion'
+cookbook 'database'
+cookbook 'gem_installer'
+cookbook 'chef_gem'
+cookbook 'build-essential'
 #cookbook 'activemq'
 #cookbook 'tomcat' 
 

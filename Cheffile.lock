@@ -4,23 +4,31 @@ SITE
     apache2 (1.1.8)
     apt (1.4.2)
     ark (0.0.10)
+    aws (0.99.1)
+    build-essential (1.0.2)
+    chef_gem (0.0.3)
     chef_handler (1.0.6)
+    database (1.2.0)
+      aws (>= 0.0.0)
+      mysql (>= 1.2.0)
+      postgresql (>= 0.0.0)
+      xfs (>= 0.0.0)
     dmg (1.0.0)
+    gem_installer (0.1.2)
     git (1.0.0)
       dmg (>= 0.0.0)
       runit (>= 0.0.0)
       yum (>= 0.0.0)
-    java (1.5.0)
-    mysql (1.2.6)
-      openssl (>= 0.0.0)
-      windows (>= 0.0.0)
     openssl (1.0.0)
+    postgresql (0.99.4)
+      openssl (>= 0.0.0)
     runit (0.15.0)
     subversion (1.0.0)
       apache2 (>= 0.0.0)
       windows (>= 0.0.0)
     windows (1.3.0)
       chef_handler (>= 0.0.0)
+    xfs (1.0.0)
     yum (0.6.2)
 
 GIT
@@ -30,6 +38,22 @@ GIT
   specs:
     ivy (0.0.1)
       java (>= 0.0.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/java.git
+  ref: master
+  sha: d645a4f29973e9d95ce1777d0be7dbedf3b96bfd
+  specs:
+    java (1.5.1)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/mysql.git
+  ref: master
+  sha: 7b7bef22c03099095cb59f967cc3d2a5392eb5b8
+  specs:
+    mysql (1.2.7)
+      openssl (>= 0.0.0)
+      windows (>= 0.0.0)
 
 GIT
   remote: https://github.com/springyboing/grails-cookbook
@@ -51,6 +75,10 @@ DEPENDENCIES
   apache2 (>= 0)
   apt (>= 0)
   ark (>= 0)
+  build-essential (>= 0)
+  chef_gem (>= 0)
+  database (>= 0)
+  gem_installer (>= 0)
   git (>= 0)
   grails (>= 0)
   groovy (>= 0)

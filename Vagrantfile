@@ -14,16 +14,23 @@ Vagrant::Config.run do |config|
   #config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
+  config.vm.customize [
+    "modifyvm", :id,
+    "--name", "GRAILS VM",
+    "--memory", "768"
+  ]
+
+  config.vm.host_name = "grails-vm"
   config.vm.network :hostonly, "192.168.33.10"
   config.vm.forward_port(80, 9080)   
   config.vm.forward_port(8080, 9090)
 
-  #config.vm.provision :shell do |shell|
-  #  shell.inline = "gem update --conservative chef"
-  #end
+  config.vm.provision :shell do |shell|
+    shell.inline = "sudo apt-get -y -qq install build-essential mysql-client libmysqlclient-dev"
+  end
 
   config.vm.provision :chef_solo do |chef|
-    chef.log_level = :debug
+    #chef.log_level = :debug
     chef.cookbooks_path = ["./cookbooks", "./my-cookbooks"]
     chef.roles_path = "./roles"
     #chef.data_bags_path = "./databags"
