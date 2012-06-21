@@ -21,7 +21,8 @@ cookbook 'git'
 cookbook 'ivy',
 	:git => 'https://github.com/bryanwb/ivy'
 cookbook 'java',
-	:git => 'https://github.com/opscode-cookbooks/java.git'
+	:git => 'https://github.com/springyboing/java.git'
+	#:git => 'https://github.com/opscode-cookbooks/java.git'
 cookbook 'mysql',
 	:git => 'https://github.com/opscode-cookbooks/mysql.git'
 #cookbook 'nginx'
@@ -37,7 +38,7 @@ cookbook 'build-essential'
 #cookbook 'nginx'
 #cookbook 'infochimps_statsd'
 
-# cookbook 'groovy',
-	# :git => 'https://github.com/springyboing/groovy-cookbook'
- cookbook 'grails',
+cookbook 'groovy',
+	 :git => 'https://github.com/springyboing/groovy-cookbook'
+cookbook 'grails',
 	 :git => 'https://github.com/springyboing/grails-cookbook'

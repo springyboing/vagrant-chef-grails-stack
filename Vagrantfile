@@ -40,15 +40,15 @@ Vagrant::Config.run do |config|
 
     #chef.add_role("database")
     chef.add_role("dev")
-    #chef.add_role("application")
+    chef.add_role("application")
     # chef.add_role("message-bus")
     # chef.add_role("statsd")
     chef.json = {
       :mysql => {
         :server_root_password => 'password'
       },
-      :ssh_key => {
-        :blur => IO.read("#{ENV['HOME']}/.ssh/id_rsa")
+      :dev_env => {
+        :ssh_key => IO.read("#{ENV['HOME']}/.ssh/id_rsa")
       }
     }
 

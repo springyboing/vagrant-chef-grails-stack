@@ -40,13 +40,6 @@ GIT
       java (>= 0.0.0)
 
 GIT
-  remote: https://github.com/opscode-cookbooks/java.git
-  ref: master
-  sha: d645a4f29973e9d95ce1777d0be7dbedf3b96bfd
-  specs:
-    java (1.5.1)
-
-GIT
   remote: https://github.com/opscode-cookbooks/mysql.git
   ref: master
   sha: 237a1a8d49658767537a305568cb2983bd606bc6
@@ -58,10 +51,25 @@ GIT
 GIT
   remote: https://github.com/springyboing/grails-cookbook
   ref: master
-  sha: f72573fe98fde0003498ef5196c9293e83577849
+  sha: fdf8ce54018ae21599a063694d720a8bbf489ae6
   specs:
     grails (0.0.1)
       java (>= 0.0.0)
+
+GIT
+  remote: https://github.com/springyboing/groovy-cookbook
+  ref: master
+  sha: e7c50cd55bfd24a1e6c65209dc7b2cc37e087598
+  specs:
+    groovy (0.0.1)
+      java (>= 0.0.0)
+
+GIT
+  remote: https://github.com/springyboing/java.git
+  ref: master
+  sha: be470be82d5069f75b9cd60e418b624d9a23de34
+  specs:
+    java (1.5.1)
 
 DEPENDENCIES
   apache2 (>= 0)
@@ -73,6 +81,7 @@ DEPENDENCIES
   gem_installer (>= 0)
   git (>= 0)
   grails (>= 0)
+  groovy (>= 0)
   ivy (>= 0)
   java (>= 0)
   mysql (>= 0)

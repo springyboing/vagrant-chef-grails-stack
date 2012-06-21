@@ -10,6 +10,15 @@
 include_recipe "git"
 include_recipe "database"
 
+file "/home/vagrant/.ssh/id_rsa" do
+  content <<-EOS
+    #{node['dev_env']['ssh_key']}
+  EOS
+  mode 0755
+  owner "vagrant"
+  group "vagrant"
+end
+
 directory "/vagrant/apps" do
   recursive true
 end
