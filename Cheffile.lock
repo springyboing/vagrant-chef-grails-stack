@@ -4,7 +4,7 @@ SITE
     apache2 (1.1.8)
     apt (1.4.2)
     ark (0.0.10)
-    aws (0.99.1)
+    aws (0.100.0)
     build-essential (1.0.2)
     chef_gem (0.0.3)
     chef_handler (1.0.6)
@@ -49,7 +49,7 @@ GIT
 GIT
   remote: https://github.com/opscode-cookbooks/mysql.git
   ref: master
-  sha: 7b7bef22c03099095cb59f967cc3d2a5392eb5b8
+  sha: 237a1a8d49658767537a305568cb2983bd606bc6
   specs:
     mysql (1.2.7)
       openssl (>= 0.0.0)
@@ -58,15 +58,7 @@ GIT
 GIT
   remote: https://github.com/springyboing/grails-cookbook
   ref: master
-  sha: f15b461b3b7ff2377d978dfdd6114132b7f862ae
-  specs:
-    groovy (0.0.1)
-      java (>= 0.0.0)
-
-GIT
-  remote: https://github.com/springyboing/groovy-cookbook
-  ref: master
-  sha: fc282233a1ece903fa209ce8070884f879a0fe52
+  sha: f72573fe98fde0003498ef5196c9293e83577849
   specs:
     grails (0.0.1)
       java (>= 0.0.0)
@@ -81,7 +73,6 @@ DEPENDENCIES
   gem_installer (>= 0)
   git (>= 0)
   grails (>= 0)
-  groovy (>= 0)
   ivy (>= 0)
   java (>= 0)
   mysql (>= 0)
