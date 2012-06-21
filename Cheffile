@@ -37,7 +37,7 @@ cookbook 'build-essential'
 #cookbook 'nginx'
 #cookbook 'infochimps_statsd'
 
-cookbook 'groovy',
-	:git => 'https://github.com/springyboing/grails-cookbook'
-cookbook 'grails',
-	:git => 'https://github.com/springyboing/groovy-cookbook'
+# cookbook 'groovy',
+	# :git => 'https://github.com/springyboing/groovy-cookbook'
+ cookbook 'grails',
+	 :git => 'https://github.com/springyboing/grails-cookbook'
